@@ -8,8 +8,8 @@ friends = [["Ashad","IBA"],
            ["Taha","NED"]
           ]
 friends_csv = open("friends.csv","w")
-writer = csv.writer(friends_csv)
-writer.writerows(friends)
+for name,inst in friends:
+    friends_csv.write("{},{}\n".format(name,inst))
 print("Write coplete!")
 #Using with function you dont need to close the file
 friends_csv.close()
